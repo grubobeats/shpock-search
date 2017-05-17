@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shpock test project</title>
+
+  <!-- Starting CSS -->
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+
+
+<div class="container">
+  <div id="header">
+    <div class="logo__wrapper">
+      <img src="img/shpock-logo.png" alt="shpock logo" class="logo" />
+    </div>
+    <form class="search__form">
+      <input type="text" placeholder="Search" class="search__input"/>
+      <img src="img/icon_filter.svg" alt="filter" class="filters_btn">
+    </form>
+  </div>
+
+  <div id="filters">
+    <div class="all_filters">
+
+      <div id="map"></div>
+
+      <div class="filters_title">
+        <h2>Filters <small class="keyword_preview"> </small></h2>
+      </div>
+
+      <div class="filter_block">
+        <span class="range_title">Listed in the last</span>
+        <div class="slider range_listed_in_last slider-material-orange"></div>
+        <span class="range_period listed_in_text"></span>
+      </div>
+
+      <div class="filter_block">
+        <span class="range_title">Radius</span>
+        <div class="slider range_radius slider-material-orange"></div>
+        <span class="range_period radius_text"></span>
+      </div>
+
+      <div class="filter_block">
+        <span class="range_title">Set your price range</span>
+        <div class="slider range_price_range slider-material-orange"></div>
+        <span class="range_period price_text"></span>
+      </div>
+
+      <button class="btn btn-raised btn-success apply_filters">Apply filters</button>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Material for Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap-material-design.min.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- noUISlider -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
+<script src="js/j.js"></script>
+
+<script>$.material.init();</script>
+<!-- GoogleMaps -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCscwQD_LsTh0PlblNej9VuHgl7NQ084kY&callback=initMap"></script>
+
+</body>
+</html>

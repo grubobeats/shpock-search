@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  font-family: $noto;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+// SCSS
+body {
+  background: $background no-repeat;
+  background-size: cover;
+}
+
+
+.container {
+  height: 600px;
+  width: 1200px;
+  padding: 0;
+  top: calc(50% - 300px);
+  left: calc(50% - 600px);
+  position: absolute;
+  overflow: hidden;
+}
+
+
+
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 165px;
+
+  .logo__wrapper {
+    width: 100%;
+    text-align: center;
+    position: static;
+    z-index: 2;
+
+    .logo {
+      width: 118px;
+      padding: 30px 0;
+    }
+  }
+
+
+  .search__form {
+    display:flex;
+    width: 100%;
+    justify-content: flex-start;
+    position: static;
+    z-index: 2;
+
+    .search__input {
+      padding: 10px;
+      font-size: 1.2em;
+      width: calc(100% - 50px);
+      border: 1px solid white;
+      transition: .1s linear;
+
+      &:focus {
+        outline: none;
+        border: 2px solid $green;
+      }
+    }
+
+    .filters_btn {
+      background: $green;
+      width: 50px;
+      transition: 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        background: $dark_green_c;
+      }
+    }
+
+    .search__button {
+      transition: 0.3s;
+      cursor: pointer;
+      width: 50px;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        background: $dark_green;
+        width: 100px;
+      }
+    }
+  }
+}
+
+
+#filters {
+  height: 435px;
+  color: $green;
+  overflow: hidden;
+
+  .all_filters {
+    background: rgba($dark_green_c, 0.8);
+    height: 100%;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    .filters_title {
+      width: 100%;
+      background: $green;
+      margin-top:-33px;
+
+      h2 {
+        color: white;
+        font-family: $noto;
+        padding-left: 17px;
+        margin: 15px 0;
+
+        small {
+          color: white;
+        }
+      }
+    }
+
+    .filter_block {
+      width: 30%;
+      height: 50px;
+      color: white;
+
+      .here_slider {
+        display: block;
+      }
+
+      .range_title {
+        width: 100%;
+        font-family: $noto;
+      }
+      input {
+        width: calc(100% - 50px);
+      }
+      .range_period {
+        width: 50px;
+        padding: 0 0 0 10px;
+        font-family: $noto;
+      }
+
+    }
+  }
+
+  .apply_filters {
+    position: relative;
+    height: 50px;
+    text-transform: uppercase;
+    bottom: -20px;
+    background: $green;
+
+    &:hover {
+      background: rgba($green, 0.7);
+    }
+
+    &:focus {
+      background: $green;
+    }
+  }
+}
+
+.show_filters {
+  animation: animation 300ms linear both;
+}
+
+.animation-target {
+  -webkit-animation: animation 1000ms linear both;
+  animation: animation 1000ms linear both;
+}
+
+/*
+ * Animations
+ */
+@-webkit-keyframes animation {
+  0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); }
+  3.2% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); }
+  6.41% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); }
+  9.61% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); }
+  12.81% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); }
+  19.22% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); }
+  25.63% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); }
+  65.67% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); }
+  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+}
+
+@keyframes animation {
+  0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); }
+  3.2% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); }
+  6.41% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); }
+  9.61% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); }
+  12.81% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); }
+  19.22% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); }
+  25.63% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); }
+  65.67% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); }
+  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
+}
+
+
+/*
+ * Slider
+ */
+.slider {
+  background-color: white !important;
+  .noUi-handle {
+    border-color: $green !important;
+    background-color: white !important;
+    top: -4px;
+  }
+
+  .noUi-origin {
+    background: #ffffff;
+    height: 5px;
+  }
+}
+
+.noUi-connect {
+  background-color: $green !important;
+}
+
+.noUi-horizontal {
+  height: 5px !important;
+}
+
+
+
+
+/**
+ * Placeholder
+ */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $green;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $green;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $green;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $green;
+}
+
+
+/*
+ * Maps
+ */
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 150px;
+  width: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
