@@ -1,6 +1,5 @@
 // On page ready:
 (function(){
-
     // Variables
     var searchInput = $('.search__input'),
         filtersBtn = $('.filters_btn'),
@@ -8,7 +7,8 @@
         applyFiltersBtn = $('.apply_filters'),
         keywordPreview = $('.keyword_preview'),
         animatedMenuBtn = $('#nav-icon3'),
-        onlyUserCountry = $('.only_users_contry');
+        onlyUserCountry = $('.only_users_contry'),
+        json_preview = $('.json_preview');
 
     // Showing the filters menu after making input
     var timer;
@@ -16,6 +16,7 @@
         //Hide the filters menu if visible
         filters.removeClass('show_filters');
         animatedMenuBtn.removeClass('open');
+        json_preview.removeClass('show')
 
         clearTimeout(timer);
         timer = setTimeout(function (event) {
@@ -178,15 +179,14 @@
         setTimeout(function(){
             filters.removeClass('show_filters');
             animatedMenuBtn.removeClass('open');
-
-            $('.json_preview').addClass('show')
+            json_preview.addClass('show')
         }, 500);
     });
 
 
     // Hide json preview
     $('.close_json').click(function(){
-        $('.json_preview').removeClass('show')
+        json_preview.removeClass('show')
     });
 
 

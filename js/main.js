@@ -29,7 +29,16 @@ var search = {
             sort_id: 1
         },
         only_user_country: false
-    }
+    },
+    user: {
+        position: {
+            lat: null,
+            lng: null,
+            timestamp: null,
+            country: null
+        }
+    },
+    search_input: null
 };
 
 
