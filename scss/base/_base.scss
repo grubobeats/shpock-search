@@ -151,8 +151,9 @@ body {
           }
           .range_period {
             width: 50px;
-            padding: 0 0 0 10px;
             font-family: $noto;
+            font-size: 12px;
+            text-transform: capitalize;
           }
 
         }
@@ -179,11 +180,10 @@ body {
             .cat_icon {
               width: 40px;
               height: 40px;
-              border: 1px solid $green;
               border-radius: 50%;
               margin: 0 auto;
               cursor: pointer;
-              background: rgba($green, 0);
+              background: $gray;
               transition: 0.2s;
               display: flex;
               justify-content:center;
@@ -293,10 +293,10 @@ body {
                 justify-content: center;
                 align-content:center;
                 text-align: center;
-                border: 1px solid #ffffff;
                 border-radius: 50%;
                 transition: 0.2s;
                 cursor: pointer;
+                background: $dark_green;
 
                 &.selected {
                   background: white;
@@ -307,7 +307,7 @@ body {
                 }
 
                 &:hover {
-                  box-shadow: 0 0 3px #ffffff;
+                  box-shadow: 0 0 3px $dark_green;
                 }
 
                 .fi {
@@ -379,13 +379,14 @@ body {
     text-transform: uppercase;
     background: $green;
     color: white;
+    transition: 0.2s;
 
     &:hover {
       background: rgba($green, 0.7);
     }
 
     &:focus {
-      background: $green;
+      transform: translateX(100%);
     }
   }
 }

@@ -170,6 +170,14 @@
     // Output object to console
     applyFiltersBtn.click(function () {
         console.log(search);
+
+        /*
+        // Closing filters bar after applying filters
+        setTimeout(function(){
+            filters.removeClass('show_filters');
+            animatedMenuBtn.removeClass('open');
+        }, 1000);
+        */
     });
 
 
