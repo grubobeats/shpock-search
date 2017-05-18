@@ -20,20 +20,26 @@ function initMap() {
                     lat: position.coords.latitude,
                     lng: position.coords.longitude
                 },
-                address = "";
+                address, country;
 
             search.user = {
                 position: {
                     lat: pos.lat,
                     lng: pos.lng,
-                    timestamp: position.timestamp
+                    timestamp: position.timestamp,
+                    country: ""
                 }
             };
+
+
 
             // Getting user friendly address from lat and lng
             $.get('http://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true', function( response ) {
                 address = response.results[0].formatted_address;
+                country = response.results[0].address_components[6].short_name;
                 infoWindow.setContent( address );
+
+                search.user.position.country = country;
             });
 
             infoWindow.setPosition(pos);

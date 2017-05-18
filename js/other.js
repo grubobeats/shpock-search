@@ -7,12 +7,8 @@
         filters = $('.all_filters'),
         applyFiltersBtn = $('.apply_filters'),
         keywordPreview = $('.keyword_preview'),
-        animatedMenuBtn = $('#nav-icon3');
-
-    // Setting default values for filters
-    $('.listed_in_text').text( search.attributes.period.ui_string );
-    $('.radius_text').text( search.attributes.radius.ui_string );
-    $('.price_text').text( search.attributes.price.ui_string );
+        animatedMenuBtn = $('#nav-icon3'),
+        onlyUserCountry = $('.only_users_contry');
 
     // Showing the filters menu after making input
     var timer;
@@ -188,5 +184,11 @@
         setTimeout(function(){
             applyFiltersBtn.tooltip('hide')
         }, 5000)
-    })
+    });
+
+
+    // Select only users country handle
+    onlyUserCountry.change(function(){
+       search.attributes.only_user_country = $(this).prop('checked');
+    });
 })();

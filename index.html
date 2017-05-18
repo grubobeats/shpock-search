@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Shpock test project</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Starting CSS -->
   <link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -38,23 +40,18 @@
         <h2>Filters <small class="keyword_preview"> </small></h2>
       </div>
 
-
-
       <div class="left upper">
-
         <div class="sliders">
           <div class="filter_block">
             <span class="range_title">Listed in the last</span>
             <div class="slider range_listed_in_last slider-material-orange"></div>
             <span class="range_period listed_in_text"></span>
           </div>
-
           <div class="filter_block">
             <span class="range_title">Radius</span>
             <div class="slider range_radius slider-material-orange"></div>
             <span class="range_period radius_text"></span>
           </div>
-
           <div class="filter_block">
             <span class="range_title">Set your price range</span>
             <div class="slider range_price_range slider-material-orange"></div>
@@ -65,82 +62,71 @@
         <div class="categories">
           <ul>
             <li>
-              <div class="cat_icon selected" data-cat_id="1">
+              <div class="cat_icon" data-cat_id="1">
                 <div class="fi flaticon-select-all"></div>
               </div>
               <span class="cat_name">Everything</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="2">
                 <div class="fi flaticon-location-pointer"></div>
               </div>
               <span class="cat_name">New in your area</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="3">
                 <div class="fi flaticon-necklace"></div>
               </div>
               <span class="cat_name">Fashion and Accessories</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="4">
                 <div class="fi flaticon-house"></div>
               </div>
               <span class="cat_name">Home and Garden</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="5">
                 <div class="fi flaticon-responsive"></div>
               </div>
               <span class="cat_name">Electronics</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="6">
                 <div class="fi flaticon-train"></div>
               </div>
               <span class="cat_name">Baby and Child</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="7">
                 <div class="fi flaticon-trophy"></div>
               </div>
               <span class="cat_name">Sport, Leisure and Games</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="8">
                 <div class="fi flaticon-books-stack-of-three"></div>
               </div>
               <span class="cat_name">Movies, Books and Music</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="9">
                 <div class="fi flaticon-sports-car"></div>
               </div>
               <span class="cat_name">Cars and Motors</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="10">
                 <div class="fi flaticon-house"></div>
               </div>
               <span class="cat_name">Property</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="11">
                 <div class="fi flaticon-settings"></div>
               </div>
               <span class="cat_name">Services</span>
             </li>
-
             <li>
               <div class="cat_icon" data-cat_id="12">
                 <div class="fi flaticon-select-all-1"></div>
@@ -149,27 +135,24 @@
             </li>
           </ul>
         </div>
-
       </div>
 
       <div class="right upper">
         <div id="map"></div>
       </div>
 
-
       <div class="last_row">
         <div class="left">
           <div class="switcher togglebutton">
             <label>
               Show results only from your country?
-              <input type="checkbox" class="only_user_contry">
+              <input type="checkbox" class="only_users_contry">
             </label>
           </div>
-
           <div class="switcher sortby">
             <span>Sort By:</span>
             <ul>
-              <li class="sorter selected" data-sort="distance" data-sort-id="1"><i class="fi flaticon-distance"></i></li>
+              <li class="sorter" data-sort="distance" data-sort-id="1"><i class="fi flaticon-distance"></i></li>
               <li class="sorter" data-sort="date" data-sort-id="2"><i class="fi flaticon-calendar"></i></li>
               <li class="sorter" data-sort="price up" data-sort-id="3"><i class="fi flaticon-price-tag"></i></li>
               <li class="sorter" data-sort="price down" data-sort-id="4"><i class="fi flaticon-price-tag to-down"></i></li>
@@ -179,7 +162,6 @@
 
         <div class="right">
           <div class="action">
-            <!--<button class="btn btn-raised btn-success apply_filters" data-toggle="tooltip" data-placement="right" title="Please, open your developers console.">Apply filters</button>-->
             <button type="button" class="apply_filters">Apply</button>
           </div>
         </div>
@@ -211,6 +193,7 @@
 <script>$.material.init();</script>
 <!-- GoogleMaps -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCscwQD_LsTh0PlblNej9VuHgl7NQ084kY&callback=initMap"></script>
+
 
 </body>
 </html>
