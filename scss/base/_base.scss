@@ -575,3 +575,47 @@ $slider_secondary: $green;
   width: 0%;
   left: 50%;
 }
+
+
+/**
+ * Json preview in body
+ */
+.json_preview {
+  position: fixed;
+  bottom: -450px;
+  background: $green;
+  height: 450px;
+  left: 0;
+  width: 100%;
+  transition: 0.2s;
+
+  &.show {
+    bottom: 0;
+  }
+
+  .close_json {
+    position: relative;
+    align-self: flex-start;
+    left: calc(100% - 30px);
+    padding: 10px 0;
+    top: 15px;
+    cursor: pointer;
+
+    span {
+      color: #ffffff;
+    }
+  }
+
+  .json {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  };
+
+  .jsonFormatter-codeContainer {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    align-self: flex-end;
+  }
+}

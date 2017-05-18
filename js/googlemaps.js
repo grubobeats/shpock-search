@@ -8,7 +8,10 @@
 var map, infoWindow;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
+        center: {
+            lat: 48.23496,
+            lng: 16.4145534
+        },
         zoom: 16
     });
     infoWindow = new google.maps.InfoWindow;
@@ -30,8 +33,6 @@ function initMap() {
                     country: ""
                 }
             };
-
-
 
             // Getting user friendly address from lat and lng
             $.get('http://maps.googleapis.com/maps/api/geocode/json?latlng=' + pos.lat + ',' + pos.lng + '&sensor=true', function( response ) {

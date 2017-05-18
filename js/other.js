@@ -170,14 +170,23 @@
     // Output object to console
     applyFiltersBtn.click(function () {
         console.log(search);
+        var json = JSON.stringify(search);
+        $('.json').html(json);
+        $('.json').jsonFormatter();
 
-        /*
         // Closing filters bar after applying filters
         setTimeout(function(){
             filters.removeClass('show_filters');
             animatedMenuBtn.removeClass('open');
-        }, 1000);
-        */
+
+            $('.json_preview').addClass('show')
+        }, 500);
+    });
+
+
+    // Hide json preview
+    $('.close_json').click(function(){
+        $('.json_preview').removeClass('show')
     });
 
 
@@ -190,7 +199,7 @@
     // Hiding Bootstrap tooltip
     applyFiltersBtn.on('show.bs.tooltip', function () {
         setTimeout(function(){
-            applyFiltersBtn.tooltip('hide')
+            applyFiltersBtn.tooltip('hide');
         }, 5000)
     });
 
