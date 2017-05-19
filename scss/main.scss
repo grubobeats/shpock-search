@@ -1,7 +1,19 @@
 // Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
-@import '__variables';
-@import '_flaticon.scss';
+// 3th party CSS
+@import '__flaticon.scss';
+@import '__material-design-bootstrap.scss';
+
+// Custom SCSS
+@import 'variables';
 @import 'base/base';
+
+// Parts
+@import 'parts/animations';
+@import 'parts/slider';
+@import 'parts/google_maps';
+@import 'parts/json_preview_box';
+
+// Mobile friendly
 @import 'mobile';

@@ -8,12 +8,12 @@ html, body {
   height: 100%;
 }
 
-// SCSS
 body {
   background: $background no-repeat;
   background-size: cover;
+  margin:0;
+  padding:0;
 }
-
 
 .container {
   height: 600px;
@@ -24,9 +24,6 @@ body {
   position: absolute;
   overflow: hidden;
 }
-
-
-
 
 #header {
   display: flex;
@@ -102,7 +99,6 @@ body {
   overflow: hidden;
 
   .all_filters {
-    //background: rgba($dark_green_c, 0.8);
     background: white;
     height: 100%;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1);
@@ -400,66 +396,6 @@ body {
   animation: animation 1000ms linear both;
 }
 
-/*
- * Animations
- */
-@-webkit-keyframes animation {
-  0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); }
-  3.2% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); }
-  6.41% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); }
-  9.61% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); }
-  12.81% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); }
-  19.22% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); }
-  25.63% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); }
-  65.67% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); }
-  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-}
-
-@keyframes animation {
-  0% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1200, 0, 1); }
-  3.2% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -678.547, 0, 1); }
-  6.41% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -358.341, 0, 1); }
-  9.61% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -173.961, 0, 1); }
-  12.81% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -74.589, 0, 1); }
-  19.22% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -2.912, 0, 1); }
-  25.63% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.927, 0, 1); }
-  65.67% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); }
-  100% { -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
-}
-
-
-/*
- * Slider
- */
-
-$slider_primary: $gray;
-$slider_secondary: $green;
-
-.slider {
-  background-color: $slider_primary !important;
-  .noUi-handle {
-    border-color: $slider_secondary !important;
-    background-color: $slider_primary !important;
-    top: -4px;
-  }
-
-  .noUi-origin {
-    background: $slider_primary;
-    height: 5px;
-  }
-}
-
-.noUi-connect {
-  background-color: $slider_secondary !important;
-}
-
-.noUi-horizontal {
-  height: 5px !important;
-}
-
-
-
-
 /**
  * Placeholder
  */
@@ -474,148 +410,4 @@ $slider_secondary: $green;
 }
 :-moz-placeholder { /* Firefox 18- */
   color: $green;
-}
-
-
-/*
- * Maps
- */
-#map {
-  height: 100%;
-  width: 100%;
-}
-
-
-/*
- * Tooltip
- */
-.tooltip {
-
-  .tooltip-inner {
-    color: $green;
-    background: #ffffff;
-    padding: 14px;
-  }
-}
-
-
-/**
- * SVG animation for hamburger
- */
-
-#nav-icon3 {
-  top: 12px;
-  width: 30px;
-  height: 45px;
-  position: relative;
-  margin: 0 auto;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
-}
-
-#nav-icon3 span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: #ffffff;
-  opacity: 1;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-}
-
-#nav-icon3 span:nth-child(1) {
-  top: 0px;
-}
-
-#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
-  top: 10px;
-}
-
-#nav-icon3 span:nth-child(4) {
-  top: 20px;
-}
-
-#nav-icon3.open span:nth-child(1) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-
-#nav-icon3.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#nav-icon3.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-#nav-icon3.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
-
-
-/**
- * Json preview in body
- */
-.json_preview {
-  position: fixed;
-  bottom: -450px;
-  background: $green;
-  height: 450px;
-  left: 0;
-  width: 100%;
-  transition: 0.2s;
-
-  &.show {
-    bottom: 0;
-  }
-
-  .close_json {
-    position: relative;
-    align-self: flex-start;
-    left: calc(100% - 30px);
-    padding: 10px 0;
-    top: 15px;
-    cursor: pointer;
-
-    span {
-      color: #ffffff;
-    }
-  }
-
-  .json {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-  };
-
-  .jsonFormatter-codeContainer {
-    width: 100%;
-    height: 400px;
-    overflow-y: scroll;
-    align-self: flex-end;
-  }
 }

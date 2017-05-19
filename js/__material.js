@@ -350,4 +350,7 @@
     }
   };
 
+  // Init material JS @vladan
+  $.material.init();
+
 })(jQuery);

@@ -16,7 +16,7 @@
         //Hide the filters menu if visible
         filters.removeClass('show_filters');
         animatedMenuBtn.removeClass('open');
-        json_preview.removeClass('show')
+        json_preview.removeClass('show');
 
         clearTimeout(timer);
         timer = setTimeout(function (event) {
@@ -179,30 +179,14 @@
         setTimeout(function(){
             filters.removeClass('show_filters');
             animatedMenuBtn.removeClass('open');
-            json_preview.addClass('show')
+            json_preview.addClass('show');
         }, 500);
     });
 
-
     // Hide json preview
     $('.close_json').click(function(){
-        json_preview.removeClass('show')
+        json_preview.removeClass('show');
     });
-
-
-    // Showing Bootstrap tooltip
-    applyFiltersBtn.tooltip({
-        trigger: "click",
-        html: true
-    });
-
-    // Hiding Bootstrap tooltip
-    applyFiltersBtn.on('show.bs.tooltip', function () {
-        setTimeout(function(){
-            applyFiltersBtn.tooltip('hide');
-        }, 5000)
-    });
-
 
     // Select only users country handle
     onlyUserCountry.change(function(){

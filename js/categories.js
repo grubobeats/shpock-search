@@ -16,7 +16,6 @@
         }
     }
 
-
     category_button.click(function(){
         var this_cat = $(this).data('cat_id'),
             array = search.attributes.categories;

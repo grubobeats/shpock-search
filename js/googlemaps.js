@@ -1,8 +1,4 @@
 /**
- * Created by vladan on 17/05/2017.
- */
-
-/**
  * Google Maps API
  */
 var map, infoWindow;

@@ -3,10 +3,7 @@
 
     /**
      * Make ul list to act as a radio button
-     * @param array
-     * @param value
      */
-
     category_button.click(function(){
 
         category_button.each(function(){

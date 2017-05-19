@@ -1,0 +1,28 @@
+/*
+ * Slider
+ */
+
+$slider_primary: $gray;
+$slider_secondary: $green;
+
+.slider {
+  background-color: $slider_primary !important;
+  .noUi-handle {
+    border-color: $slider_secondary !important;
+    background-color: $slider_primary !important;
+    top: -4px;
+  }
+
+  .noUi-origin {
+    background: $slider_primary;
+    height: 5px;
+  }
+}
+
+.noUi-connect {
+  background-color: $slider_secondary !important;
+}
+
+.noUi-horizontal {
+  height: 5px !important;
+}

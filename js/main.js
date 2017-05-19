@@ -46,7 +46,6 @@ var search = {
  * Setting default values for page
  */
 (function(){
-
     try {
         $('.listed_in_text').text(search.attributes.period.ui_string);
         $('.radius_text').text(search.attributes.radius.ui_string);
@@ -54,7 +53,7 @@ var search = {
         $('.only_users_contry').prop('checked', search.attributes.only_user_country);
 
         search.attributes.categories.forEach(function (item, index) {
-            $('[data-cat_id="' + item + '"]').addClass('selected')
+            $('[data-cat_id="' + item + '"]').addClass('selected');
         });
 
         $('.sorter').each(function () {
@@ -63,6 +62,6 @@ var search = {
             }
         });
     } catch (err) {
-        console.log("Error: " + err)
+        console.log("Error: " + err);
     }
 })();
